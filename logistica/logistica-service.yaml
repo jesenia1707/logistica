@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: logistica-service
+
+spec:
+  selector:
+    app: logistica
+
+  ports:
+  - protocol: TCP
+    port: 8083
+    targetPort: 8083
+
+  type: NodePort
